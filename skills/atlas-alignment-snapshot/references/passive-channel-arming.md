@@ -12,8 +12,9 @@ either configured now or labelled *waiting on {X}*. There is no third state.
 *Hashtags, narratives and mentions mapped to the brand's ontology as they emerge.*
 
 - **Needs:** a hashtag watchlist on the profile.
-- **Arm with:** `add_profile_hashtag`, then `list_profile_hashtags` to verify, and
-  `set_profile_hashtag_search_active` to make it live.
+- **Arm with:** `add_hashtags`, then `list_hashtags` to verify it's active
+  (adding a hashtag activates it immediately — there is no separate
+  make-it-live step).
 - **Owner if a deeper set is needed:** `atlas-competitor-profile`.
 - **Say out loud:** share-of-voice **starts counting from the day the watchlist
   exists.** Day one is a baseline, not a trend. Never show an SOV number as though

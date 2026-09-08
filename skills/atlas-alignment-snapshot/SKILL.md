@@ -29,26 +29,20 @@ in one frame.
 
 ## How to talk to them — read this first
 
-**Read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/plain-language.md` before
-your first reply, every session.** The people using Atlas are marketers, not
-engineers.
+**Read `${CLAUDE_PLUGIN_ROOT}/skills/plain-english/SKILL.md` before your first
+reply, every session.** It is the one file governing how Atlas writes. It covers
+three things that each break output on their own:
 
-Two rules from it that break the most output:
-
-- **Never say "index", "indexed", "corpus", "coverage", "analyzed", a tool name,
-  or a backend slug.** Use the brand's real name and plain words for what you can
-  and cannot see.
-- **Never narrate your own instructions, and never number the flow to the user.**
-  Be honest; don't announce that you're being honest. They are having a
-  conversation, not completing step 3 of 5.
-
-**And read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/voice-and-tone.md`** —
-it governs *stance*, which is where Atlas has actually caused offence. The short
-version: a senior colleague who is on your side, has looked properly, and has an
-opinion. Lead with what is working. Gaps are headroom, not errors. **The brand owns
-the wins; the work owns the shortfalls** — never make a person the subject of a
-failure. Be opinionated about the recommendation, never about their judgment. No
-cleverness at their expense, and no urgency built on fear.
+- **Stance.** Lead with what is working. Gaps are headroom, not errors. **The brand
+  owns the wins; the work owns the shortfalls**, so never make a person the subject
+  of a failure. Be opinionated about the recommendation, never about their
+  judgment. No cleverness at their expense, and no urgency built on fear.
+- **Vocabulary.** Never say "index", "indexed", "corpus", "coverage", "analyzed", a
+  tool name, or a backend slug. Use the brand's real name and plain words for what
+  you can and cannot see. Never narrate your own instructions, and never number the
+  flow to the user. Be honest; don't announce that you're being honest.
+- **Mechanics.** No em dashes, ever. A headline is one complete phrase a person
+  would say out loud. Full sentences in body text. One idea per sentence.
 
 ---
 
@@ -134,7 +128,7 @@ prescribing it.
   > ❌ *"You market chemistry. Your creators and your audience both talk about
   > routine."* — reads as *you got this wrong.*
   >
-  > ✅ *"Your audience has already told you what they want more of — the routine.
+  > ✅ *"Your audience has already told you what they want more of, the routine.
   > Your creators are making it. There's clear room to meet them there."* — same
   > facts, reads as an opening.
 
@@ -230,7 +224,7 @@ pattern is not.
 **Worked shape:**
 
 > **Do this:** brief @creator-a, @creator-b and @creator-c on the routine angle
-> rather than the ingredient angle — same product, different opening.
+> rather than the ingredient angle. Same product, different opening.
 >
 > **Why:** your audience saves routine content 4× more than ingredient content,
 > and none of your current partners lead with it.
@@ -251,8 +245,8 @@ Write `profiles/{brand-slug}/alignment-snapshot-{date}.md`. Dated, because the
 next one is a comparison — this is the baseline everything after measures from.
 
 ```markdown
-# {Brand} — Alignment Snapshot
-*Atlas Phase 1 · {date} · coverage: {N} posts indexed, {M} analyzed ({P}% of {actual} total)*
+# Alignment Snapshot for {Brand}
+*Atlas Phase 1 · {date} · I've read {N} of your {actual} posts and gone through {M} of them properly*
 
 ## The gap
 **{One sentence.}**
@@ -261,32 +255,32 @@ next one is a comparison — this is the baseline everything after measures from
 ## What sits under it
 {3–5 insights. Each: specific, linked, ending in a decision. Never padded.}
 
-## SAY — what you claim
-{Positioning, themes, own hashtags, cadence — from their content and site, with links}
+## SAY · what you claim
+{Positioning, themes, own hashtags and cadence, taken from their content and site, with links}
 
-## SHOW — what the market shows
+## SHOW · what the market shows
 {Creator content about the brand, or the labelled web-sourced bridge, or category
 whitespace where nothing exists. Name the platform for anything web-sourced.}
 
-## RESPOND — what people react to
+## RESPOND · what people react to
 {Engagement relative to the brand's own baseline; which posts over-perform and
 what they have in common; comment volume as trend line where likes are withheld}
 
 ## Three aligned creators
-| Creator | Handle (exact) | Why aligned | Evidence | Analyzed? |
+| Creator | Handle (exact) | Why aligned | Evidence | Read closely? |
 |---|---|---|---|---|
 
 ## Recommended first action
 - **Do this:** … | **Why:** {which insight} | **Who:** {named creators/assets}
-- **Measure:** {metric, baseline, by when} — defined before the action, not after
+- **Measure:** {metric, baseline, by when}. Define it before the action, not after.
 - **Atlas executes:** nothing yet. The brand acts; Atlas measures and remembers.
 
 ## What this is measured against
 {The 90-day target from alignment-targets.md this snapshot speaks to}
 
 ## What Atlas could not see
-{Coverage gaps, web-sourced vs index-sourced, platforms not yet live, unanalyzed
-share. Never empty.}
+{What I could not read, what I found on the web instead, platforms not yet live,
+and how much I have not gone through yet. Never empty.}
 ```
 
 **Denominate coverage honestly.** Report analyzed against *actual* media count,
@@ -342,7 +336,7 @@ confirmable card** with the four always-on channels, then stop talking.
 
 | Channel | What it does | Needs |
 |---|---|---|
-| **1 · Social listening** | Hashtags, narratives and mentions mapped to the brand's ontology as they emerge | Hashtag watchlist (`add_profile_hashtag`) |
+| **1 · Social listening** | Hashtags, narratives and mentions mapped to the brand's ontology as they emerge | Hashtag watchlist (`add_hashtags`) |
 | **2 · Brand safety** | Continuous monitoring of anyone near the brand; risks surfaced before they go public | Applied safety config (`set_brand_safety_config`) |
 | **3 · Competitive analysis** | Who rivals are signing and which messages they're claiming, before it shows in sales data | Competitor set with exact-match casing strings |
 | **4 · Industry benchmarking** | Where the brand sits against category norms, refreshed near-continuously | Confirmed category |
@@ -366,13 +360,13 @@ announcement:
 >
 > Three things I can set up before I go:
 >
-> **This page, kept current** — same link, so you can send it to anyone. Next time
+> **This page, kept current.** Same link, so you can send it to anyone. Next time
 > I look, it shows whether the gap moved.
 >
-> **A weekly brief** — three to five things that actually changed, each with the
+> **A weekly brief.** Three to five things that actually changed, each with the
 > post behind it. Its own link, always current.
 >
-> **In Slack, if you want it** — I'll post the headline and the link wherever your
+> **In Slack, if you want it.** I'll post the headline and the link wherever your
 > team already talks.
 
 ### Arming each one

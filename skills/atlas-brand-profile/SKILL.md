@@ -33,7 +33,7 @@ See `${CLAUDE_PLUGIN_ROOT}/skills/atlas-session-mode/references/write-boundaries
 
 ## When this runs (two modes)
 
-- **Background quick pass (the default, at first contact via /aspire):** web research + index existence check only, NO interview, no user interruption. Write the doc as a research-only v0 with inferences provenance-marked *(inferred, unconfirmed)*. This runs while the user's first job is being delivered — they never wait on it.
+- **Background quick pass (the default, at first contact via /aspire):** web research + index existence check only, NO interview, no user interruption. **The doc's "what I used" line must say "the web" alone on this path**, and it stays that way until the user has actually told you something that landed in the doc. One confirmed answer to a single library question is enough to make it "the web and what you told me"; a formal interview is not required, and there usually never is one. Get this wrong in either direction and the doc misstates where it came from. Write the doc as a research-only v0 with inferences provenance-marked *(inferred, unconfirmed)*. This runs while the user's first job is being delivered — they never wait on it.
 - **Incremental enrichment (forever after):** the doc completes slowly across sessions. The interview content below is a question *library*, not a script — draw at most 1–2 questions into a session, at natural moments, only when the answer changes what Atlas does next. When the user says something in the course of any work that answers a library question, update the doc silently and mark it confirmed. Never run the library as a batch interview.
 
 ## What this produces
@@ -73,12 +73,12 @@ In background mode, skip this step entirely. In enrichment mode, pick the 1–2 
 **Deep probes (adapt wording to what pre-fill surfaced; add or drop probes based on what research already answered). Present each probe as 2–3 quick selects with drafted options plus an own-words escape — the "walk me through" below is the mechanic to capture, not the literal delivery format:**
 
 - **P1 · Business mechanics.** Anchor on the most consequential thing research surfaced, then ask for the mechanism, not the goal:
-  > "The next 6–12 months seem to hinge on {e.g., renewing the big retail placement / the spring launch}. Walk me through how that actually gets decided — who evaluates you, on what numbers, and when?"
+  > "The next 6–12 months seem to hinge on {e.g., renewing the big retail placement / the spring launch}. Walk me through how that actually gets decided. Who evaluates you, on what numbers, and when?"
 
-  Yields: the real outcome variable, the deadline, the metric that matters, the threat. If research surfaced nothing, ask the open form: "What's the one outcome the next 6–12 months has to produce — and what actually determines whether it happens?"
+  Yields: the real outcome variable, the deadline, the metric that matters, the threat. If research surfaced nothing, ask the open form: "What's the one outcome the next 6–12 months has to produce? And what actually determines whether it happens?"
 
 - **P2 · Content operations.** 
-  > "Walk me through how a piece of content gets made today — who shoots it, who approves it, and how long from idea to posted?"
+  > "Walk me through how a piece of content gets made today. Who shoots it, who approves it, and how long from idea to posted?"
 
   Yields: in-house production capacity, voice ownership, approval chain, and how ambitious a content calendar can realistically be. This is the question that decides whether recommendations are $5k moves or $500k moves — you can also ask scale directly as a quick order-of-magnitude confirm if it hasn't emerged.
 
@@ -89,20 +89,20 @@ In background mode, skip this step entirely. In enrichment mode, pick the 1–2 
 Write `profiles/{brand-slug}/brand-profile.md` using this structure:
 
 ```markdown
-# {Brand} — Brand Profile
-*Atlas onboarding · {date} · handle: @{handle} · sources: web + interview · index: {present ({N} posts) / discovery started {date}}*
+# Brand Profile for {Brand}
+*Atlas onboarding · {date} · handle: @{handle} · what I used: {the web / the web and what you told me} · what I can see: {N posts / nothing yet, just started reading}*
 
 ## Brand Summary
-{One short prose paragraph: what the brand is, what it stands for, how it differentiates, what it sells and where. Assembled from their own published words and anything learned during work. Mark strategic claims *(inferred)* until a role-appropriate user confirms one in the natural course of work — never via a dedicated question.}
+{One short prose paragraph: what the brand is, what it stands for, how it differentiates, what it sells and where. Assembled from their own published words and anything learned during work. Mark strategic claims *(inferred)* until a role-appropriate user confirms one in the natural course of work, never via a dedicated question.}
 
-## Brand Context  *(web-sourced at onboarding; index-derived metrics land here on first refresh)*
+## Brand Context  *(found on the web at onboarding; numbers from your own posts land here on first refresh)*
 - Positioning & inferred category: …
 - Content presence at a glance: platforms, apparent themes, rough cadence (from public view, with links)
-- Notable moments: launches, press, viral moments — with sources
-- Index status: {in the index (N posts) / discovery started — metrics will fill in}
+- Notable moments: launches, press, viral moments, with sources
+- What I can see: {N posts I can read / just started reading, so the numbers will fill in}
 
 ## Business Context
-- The 6–12 month outcome and its mechanics: {from P1 — who decides, on what, when}
+- The 6–12 month outcome and its mechanics: {from P1. Who decides, on what, when}
 - Scale & constraints: …
 - Seasonal calendar / upcoming moments: …
 - Retail & channel relationships: …
@@ -114,10 +114,10 @@ Write `profiles/{brand-slug}/brand-profile.md` using this structure:
 - Owned channels: …
 
 ## Limits & gaps
-{Data gaps about the BRAND, framed neutrally: what's not yet measured, what's web-sourced vs index-sourced, unanswered questions, fields that need owner auth. Never frame this section as Atlas product limitations or roadmap — "TikTok data is web-sourced for now" belongs here; "the Atlas index doesn't support TikTok yet, coming soon" does not. Coverage questions get answered in conversation if the user raises them, never volunteered in the doc.}
+{Data gaps about the BRAND, framed neutrally: what's not yet measured, what came from the web rather than their own posts, unanswered questions, fields that need owner auth. Never frame this section as Atlas product limitations or roadmap. "I found the TikTok side on the web for now" belongs here; "Atlas doesn't support TikTok yet, coming soon" does not. Questions about how much Atlas can see get answered in conversation if the user raises them, never volunteered in the doc.}
 
 ## What this unlocks
-{2–3 brief questions Atlas can now answer for this brand, each ending in an action —
+{2–3 brief questions Atlas can now answer for this brand, each ending in an action.
 e.g., "where is {category} showing up organically in creator content not tagged for it?"}
 ```
 

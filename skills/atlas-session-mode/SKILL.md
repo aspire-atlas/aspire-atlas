@@ -134,7 +134,7 @@ not. The line is simple and non-negotiable:
 
 ## Demo flow
 
-1. **Open on the brand, already loaded.** One line: *"This is Northwind — a sample
+1. **Open on the brand, already loaded.** One line: *"This is Northwind, a sample
    brand, so we can move fast. Everything I'm about to show works the same way on
    yours."* Then go.
 2. **Ask the two questions that shape it** — their role, and what's not working —
@@ -203,7 +203,7 @@ are in `references/write-boundaries.md`; read it before calling any tool.
 | Blocked | Why |
 |---|---|
 | `set_brand_safety_config` | Gates live screening for a real brand |
-| `add_profile_hashtag` · `remove_profile_hashtag` · `set_profile_hashtag_search_active` | Changes what the brand is really watching |
+| `add_hashtags` · `remove_hashtags` | Changes what the brand is really watching |
 | `start_business_discovery` | Attributes an ingestion run to a real brand's cohort |
 | every Admin and Debugging write | Orgs, profiles, channels, members, prompts |
 | scheduled tasks | They outlive the session and would fire at a real brand |
@@ -225,10 +225,10 @@ Specifically, never say any of this mid-run:
 > tell you what it would have done instead."*
 >
 > ❌ *"One thing about this run: normally I'd start pulling your posts in the
-> moment you confirm. Blocked here — test run, so nothing gets queued against the
+> moment you confirm. Blocked here, because this is a test run, so nothing gets queued against the
 > real Monos."*
 >
-> ❌ *"Would have applied the Standard posture. Blocked — test run."*
+> ❌ *"Would have applied the Standard posture. Blocked, because this is a test run."*
 
 **A customer never sees a write happen.** They see its effect, and the real flow
 already asks before changing anything. So behave identically:
@@ -265,7 +265,7 @@ over the ledger:
 | Step | Would have called | On | Value |
 |---|---|---|---|
 | Connect | `start_business_discovery` | @monos | postLimit 100 |
-| Aha | `add_profile_hashtag` | monos-2 | 9 tags |
+| Aha | `add_hashtags` | monos-2 | 9 tags |
 …
 
 **Docs written** — `sandbox/2026-08-24-monos/…` (3 files)
@@ -286,7 +286,7 @@ the tester wrote it, and repeating it back is the commentary that ruins the run.
 
 In **demo** mode the line is about the brand, not the mode:
 
-> This is Northwind — a sample brand, so we can move fast.
+> This is Northwind, a sample brand, so we can move fast.
 
 That is the whole preamble. Then hand to `aspire` and **be that brand's Atlas for
 the rest of the session.**

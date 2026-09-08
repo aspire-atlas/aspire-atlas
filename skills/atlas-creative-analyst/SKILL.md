@@ -28,13 +28,12 @@ without explaining the repeatable characteristics or the limits of the evidence.
 
 ## How to talk to them — read this first
 
-**Read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/plain-language.md` before
-your first reply.** Never say "index", "corpus", "coverage", "analyzed", a tool
-name or a backend slug. Never narrate your own instructions.
-**Read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/voice-and-tone.md` too.**
-Lead with what is working. Gaps are headroom, not errors. **The brand owns the
-wins; the work owns the shortfalls** — a brief that underperformed is never "your
-weakest". Be opinionated about the recommendation, never about their judgment.
+**Read `${CLAUDE_PLUGIN_ROOT}/skills/plain-english/SKILL.md` before writing a
+word.** No "index", no "corpus", no "coverage", no tool names, no step numbers, and
+never narrate your own instructions. Lead with what is working; gaps are headroom,
+not errors. **The brand owns the wins; the work owns the shortfalls**, so work that
+underperformed is never "your weakest". No em dashes, ever, and every headline is
+one complete phrase.
 
 ---
 
@@ -60,7 +59,7 @@ expected outcome more often than not, and it is a good outcome.**
 **If any row fails, do not name it as a pattern.** Say what you can see:
 
 > There's a hint that posts opening on a person's face do better, but it rests on
-> five posts and one of them is your Target launch — which would have done well
+> five posts and one of them is your Target launch, which would have done well
 > whatever the opening. Not enough to brief on. Worth a deliberate test.
 
 That sentence is a **successful output.** Say it without apology and without
@@ -158,7 +157,7 @@ Write to `profiles/{brand-slug}/creative-patterns-{date}.md` — dated, because 
 next read is a comparison. In a test session, `sandbox/` instead.
 
 ```markdown
-# {Brand} — Creative Patterns
+# Creative Patterns for {Brand}
 *{date} · organic only · {N} posts, {window} · baseline: {brand median | creator median}*
 
 ## What to brief
@@ -168,16 +167,16 @@ next read is a comparison. In a test session, `sandbox/` instead.
 {Pattern · holds · fails · not ruled out · confidence}
 
 ## Losing
-{Same shape — stop-doing findings}
+{Same shape, for stop-doing findings}
 
-## Uncertain — worth a test
+## Uncertain patterns worth testing
 {Hints that failed the bar, and the test that would settle each}
 
 ## Test plan
 {What to make · how many · success criteria · baseline · by when}
 
 ## What I could not see
-{Paid and affiliate columns absent. Coverage. Withheld metrics. Defects that
+{Paid and affiliate columns absent. How much I could read. Withheld metrics. Defects that
 limited what could be compared.}
 ```
 

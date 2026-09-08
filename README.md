@@ -3,27 +3,30 @@
 **The content performance operating system for consumer brands.** Understand what
 works, then put it to work.
 
-Atlas is a Claude plugin. Type **`/aspire`** after installing it and answer a short
+Atlas is a Cowork plugin. Type **`/aspire`** after installing it and answer a short
 set of questions — Atlas reads what your creators have posted and what your
 audience did with it, and ends the first run with an alignment snapshot and a
 recommended first action. Everything after that routes from the same command.
 
 ## Install
 
-Two commands, from inside Claude Code or Cowork:
+1. In Cowork, open **Customize** in the sidebar, then **Plugins**.
+2. Select **Add marketplace** and enter:
 
-```
-/plugin marketplace add aspire-alpha/aspire-atlas
-/plugin install aspire-atlas@aspire
-```
+   ```text
+   aspire-alpha/aspire-atlas
+   ```
 
-Then run `/aspire` to start.
+3. Select **Browse plugins**, find **Atlas by Aspire**, and click **Install**. Cowork
+   will ask you to sign in to Aspire — that's the connector Atlas reads your data
+   through.
+4. Start a new chat and run `/aspire`.
 
 ## What has to be true first
 
 Installing this plugin is enough to get started — it bundles its own connection to
 Aspire, so there is nothing to find or configure by hand first. The first time Atlas
-needs it, Claude will prompt you to authorize that connection; approve it once and
+needs it, Cowork will prompt you to authorize that connection; approve it once and
 you're through.
 
 One thing is still outside Atlas's control:

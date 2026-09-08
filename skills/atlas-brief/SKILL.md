@@ -31,13 +31,12 @@ pads itself out on a quiet week.
 
 ## How to talk to them — read this first
 
-**Read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/plain-language.md` before
-writing a word.** No "index", no "corpus", no "coverage", no tool names, no step
-numbers. Never narrate your own instructions.
-**Read `${CLAUDE_PLUGIN_ROOT}/skills/aspire/references/voice-and-tone.md` too.**
-Lead with what is working. Gaps are headroom, not errors. **The brand owns the
-wins; the work owns the shortfalls** — a brief that underperformed is never "your
-weakest". Be opinionated about the recommendation, never about their judgment.
+**Read `${CLAUDE_PLUGIN_ROOT}/skills/plain-english/SKILL.md` before writing a
+word.** No "index", no "corpus", no "coverage", no tool names, no step numbers, and
+never narrate your own instructions. Lead with what is working; gaps are headroom,
+not errors. **The brand owns the wins; the work owns the shortfalls**, so work that
+underperformed is never "your weakest". No em dashes, ever, and every headline is
+one complete phrase.
 
 ---
 
@@ -67,7 +66,7 @@ Full rules in `references/brief-composition.md`. The essentials:
 - **Every item carries its evidence link.** A claim without a post behind it is the
   thing Atlas exists to replace.
 - **Every item ends in a decision or a question**, not a fact. *"A competitor
-  signed four creators in your niche this week — want to see who's left?"* beats a
+  signed four creators in your niche this week. Want to see who's left?"* beats a
   count.
 - **Lead with the one that matters most**, not the newest.
 - **Say what changed, not what is true.** Four of six customers asked "what
@@ -77,8 +76,8 @@ Full rules in `references/brief-composition.md`. The essentials:
 
 **If nothing material happened, say so in two lines and stop.**
 
-> Quiet week. Nothing moved that needs you — the gap is where it was, no new
-> mentions, roster steady. Back Monday.
+> It was a quiet week. Nothing moved that needs you. The gap is where it was.
+> There are no new mentions and the roster is steady. I'll be back Monday.
 
 A brief that manufactures insight to fill space will lose the morning habit faster
 than silence would. **A short honest brief is a successful brief.** Never pad with
@@ -147,7 +146,7 @@ Write `profiles/{brand-slug}/brief-{date}.md` — the edition, so the next one c
 avoid repeating it and can measure what changed. In test or demo mode, `sandbox/`.
 
 ```markdown
-# {Brand} — Brief, {date}
+# Brief for {Brand} on {date}
 *edition {n} · measured against: {targets} · page: {artifact URL}*
 
 ## Items
@@ -158,7 +157,7 @@ which target it serves}
 {Slack destination if posted, or "not sent"}
 
 ## Not included
-{What was considered and cut, and why — this stops the next edition from
+{What was considered and cut, and why. This stops the next edition from
 re-surfacing it as if new}
 ```
 
@@ -172,7 +171,7 @@ two decided was not worth saying.
 The brief is the whole output. Do not summarise it in chat after publishing it —
 give the headline, the link, and stop.
 
-> Three things this week. The gap narrowed — @mornings.with.dez posted the routine
+> Three things this week. The gap narrowed, because @mornings.with.dez posted the routine
 > angle and it's your best-saved creator post yet. Full brief: {link}
 >
 > Want it in Slack?

@@ -48,7 +48,7 @@ Same rules as every Atlas profile skill: pre-fill before asking; size the questi
 
 Not every brand manages brand safety, and interviewing one that doesn't is wasted trust. Before anything else, read the signals already available: did they pick a vetting or monitoring job, or mention risk, screening, or "content we can't be near"? Does a sibling profile hold an escalation chain (a brand that described one cares by definition)? Is their category one where safety is structural (kids/family, health, regulated products)? If the signals clearly say they care, proceed. If the signals are absent or ambiguous, spend **one cheap question**:
 
-> "Is brand safety something you actively manage — creators you'd never sign, content you can't be associated with — or not a real concern for you today?"
+> "Is brand safety something you actively manage, meaning creators you'd never sign and content you can't be associated with? Or is it not a real concern for you today?"
 
 **If they don't care: skip the rest of this skill.** Don't apply config, don't push the interview. Write a three-line stub to `profiles/{brand-slug}/brand-safety-profile.md` recording that safety was deliberately skipped on {date} at the brand's call (so the hub and future sessions read a decision, not a gap), note that category-default posture can be switched on anytime, and stop. If they care — even mildly — continue below, and let the strength of their answer set how deep the interview goes.
 
@@ -64,14 +64,14 @@ Not every brand manages brand safety, and interviewing one that doesn't is waste
 **Confirm 1 · Posture preset.** "How strict should we be — **Standard · Strict · Custom**?" with the 3–4 category callouts for *their* category inline ("for a family food brand we'd tighten {X} and {Y} by default — sound right?"). Custom opens the full category list; the default path never shows it.
 
 **Confirm 2 · Disclosure & required hashtag** (skip if the creators profile captured it). Pre-filled:
-> "Partners seem to use {#brandpartner}. Is that required? And your disclosure rule — #ad, #sponsored, both, or your own?"
+> "Partners seem to use {#brandpartner}. Is that required? And what's your disclosure rule: #ad, #sponsored, both, or your own?"
 
 Cheapest credible win in the product: deterministic, checkable, and Atlas reads disclosures burned into the video frame, which caption-only tools miss.
 
 **Deep probes:**
 
 - **P1 · The wince.** Real red lines come from incidents, not category checklists:
-  > "Tell me about the last time creator content made you wince — or caused a real problem. Walk me through what happened and what you did about it."
+  > "Tell me about the last time creator content made you wince, or caused a real problem. Walk me through what happened and what you did about it."
 
   Extract: the categories they *actually* fear (often not the GARM defaults — e.g., "creators making health claims we can't back"), true severity ("annoyed" vs "retailer called us"), and any brand-specific red lines the GARM taxonomy doesn't name. Write those as explicit rules in the standard.
 
@@ -82,7 +82,7 @@ Cheapest credible win in the product: deterministic, checkable, and Atlas reads 
 Draft `profiles/{brand-slug}/brand-safety-profile.md`:
 
 ```markdown
-# {Brand} — Brand Safety Standard
+# Brand Safety Standard for {Brand}
 *Atlas onboarding · {date} · posture: {Standard/Strict/Custom} · config version: {v}*
 
 ## Posture & rationale
@@ -94,21 +94,24 @@ Draft `profiles/{brand-slug}/brand-safety-profile.md`:
 {Only categories that deviate from the preset need a row with rationale}
 
 ## Brand-specific red lines
-{From P1 — rules the GARM taxonomy doesn't cover, in plain language, each testable}
+{From P1. Rules the GARM taxonomy doesn't cover, in plain language. Each one must
+be testable against a real post, so write it so a specific post can pass or fail it}
 
 ## Disclosure & compliance
 - Required disclosure: … · Required partner hashtag: …
 - Checked in captions AND on-screen overlay text
 
 ## Escalation
-{Who spots · who decides · speed — from P2 or the creators profile}
+{Who spots · who decides · speed. From P2 or the creators profile}
 
 ## Applied config record
-- Applied: {date} via set_brand_safety_config · version: {v}
-- Verification: {post link} — verdict at previous ceiling: {x} → at new ceiling: {y} ✓
+- Applied: {date} · version: {v}
+- Verified: {post link}. The verdict moved from {x} to {y} under your new standard ✓
+- Use this form instead when no post sits on the boundary: Not verified yet. The
+  closest evidence I found is {post link}, and it does not sit on the boundary.
 
 ## Known limits
-{Unenriched share of relevant content; platforms not yet in the index — bridged via web research; enrichment defects to caveat}
+{Share of relevant content I have not gone through yet; platforms I cannot read yet, bridged via web research; defects to caveat}
 ```
 
 Show the brand the draft standard and get an explicit yes **before** applying — this config will block and flag creators; it should never change silently. Then call `set_brand_safety_config`.

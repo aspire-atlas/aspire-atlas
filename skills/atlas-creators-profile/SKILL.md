@@ -62,12 +62,12 @@ Additions from the brand: get the **handle**, not just the name. If they name so
 **Deep probes:**
 
 - **P1 · The escalation chain** *(roster brands)* — this is the highest-yield question in Atlas onboarding:
-  > "I can see {N} creators tagging you regularly. Walk me through what happens when one of them posts something off-brand — who spots it, who decides, and how fast does that need to happen?"
+  > "I can see {N} creators tagging you regularly. Walk me through what happens when one of them posts something off-brand. Who spots it, who decides, and how fast does that need to happen?"
 
   One answer yields four config values: roster confirmation pressure-test, interrupt-vs-digest policy, severity threshold, and who-sees-what routing. If a user profile already captured routing, skip the routing part and probe only speed and severity.
 
 - **P2 · The ideal creator.** Pre-fill this one from evidence before asking: search the index for creator posts mentioning or tagging the brand, and rank them by engagement **relative to each creator's own baseline** (a small creator's breakout post is a stronger signal than a big creator's average one — raw likes mislead). Describe the top 1–3 — who they are, what the post was, how far it over-performed, what themes/aesthetic carried it — and ask the brand to confirm and explain:
-  > "This post by @{creator} about you did {N}× their usual engagement — {link}. Is this the kind of partnership that works for you? What made it work from your side? And describe the customer moment you want this content to live in."
+  > "This post by @{creator} about you did {N}× their usual engagement ({link}). Is this the kind of partnership that works for you? What made it work from your side? And describe the customer moment you want this content to live in."
 
   The brand reacting to real posts yields a sharper spec than the brand generalizing from memory — and it's another moment where Atlas shows its work. **Fallback** when the index finds no brand mentions (common for brands whose creator activity lives on a platform not yet indexed): ask the open form — "Tell me about the partner (or the piece of creator content) that worked *better than you expected* — what made it work?" — and note that the evidence-first version kicks in as coverage fills.
 
@@ -80,15 +80,15 @@ Additions from the brand: get the **handle**, not just the name. If they name so
 `profiles/{brand-slug}/creators-profile.md`:
 
 ```markdown
-# {Brand} — Creators Profile
+# Creators Profile for {Brand}
 *Atlas onboarding · {date} · mode: {roster / discovery-led} · roster size: {N}*
 
 ## Confirmed roster
-| Creator | Handle (exact) | Themes | Analyzed? | Safety verdict | Notes |
+| Creator | Handle (exact) | Themes | Read closely? | Safety verdict | Notes |
 |---|---|---|---|---|---|
 
-## Not yet analyzed
-{Creators Atlas can't call either way — the honesty card. Queued for ingestion: …}
+## Not yet read closely
+{Creators Atlas can't call either way. The honesty card. Coming up: …}
 
 ## Escalation & cadence config (from the brand's own words)
 - Who spots · who decides · required speed: …
@@ -102,14 +102,14 @@ Additions from the brand: get the **handle**, not just the name. If they name so
 - Dealbreakers: …
 
 ## Limits & gaps
-{Platforms not yet in the index — bridged via web research; unanalyzed share of roster; index coverage caveats}
+{Platforms I cannot read yet, bridged via web research; share of the roster I have not gone through; caveats on how much I could see}
 
 ## What this unlocks
 {Roster mode: disclosure-gap check, 24h go-live tracking, sentiment early-warning.
 Discovery mode: whitespace search, semantic shortlists, screening gate.}
 ```
 
-The "Not yet analyzed" section is load-bearing: a verdict-less creator listed as fine is the worst failure mode this skill has. Show what Atlas doesn't know as visibly as what it does.
+The "Not yet read closely" section is load-bearing: a verdict-less creator listed as fine is the worst failure mode this skill has. Show what Atlas doesn't know as visibly as what it does.
 
 ## Step 4 — Close
 

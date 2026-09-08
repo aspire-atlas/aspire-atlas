@@ -36,16 +36,15 @@ write and block it.**
 
 `list_my_organizations` · `list_my_profiles` · `fetch_account` · `fetch_posts` ·
 `search_posts` · `search_creators` · `search_creator_marketplace` ·
-`get_brand_safety_config` · `list_profile_hashtags` · `get_job_status`
+`get_brand_safety_config` · `list_hashtags` · `list_available_hashtags` · `get_job_status`
 
 **Writes — blocked**
 
 | Tool | What it would have changed |
 |---|---|
 | `set_brand_safety_config` | The brand's live screening posture |
-| `add_profile_hashtag` | What the brand is really watching |
-| `remove_profile_hashtag` | Same, destructively |
-| `set_profile_hashtag_search_active` | Whether a watchlist is live |
+| `add_hashtags` | What the brand is really watching |
+| `remove_hashtags` | Same, destructively |
 | `start_business_discovery` | Queues real ingestion and attributes it to the brand's insights cohort |
 | `lookup_creators` | Same: a miss starts real discovery against Meta/TikTok and writes a Sighting to the brand |
 | `lookup_posts` | Same, and a tiktok miss bills a paid per-post vendor call |

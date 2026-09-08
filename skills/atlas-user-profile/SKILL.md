@@ -58,7 +58,7 @@ From the session: name, email domain, how they've phrased things so far (a CMO a
   For you, not for them: this is the highest-yield answer in the interview — it ranks the job families, positions Atlas against the incumbent, and defines "better" in their terms. Never say any of that to the user; telling someone their answer is valuable is pressure, not warmth.
 
 - **P2 · Routing & cadence mechanics.** Not "how often do you want emails?" — mechanics:
-  > "When something needs action — a partner posts something risky, a competitor makes a move — walk me through who needs to know, in what form, and how fast. And what do you check daily versus what does your boss ask you for?"
+  > "When something needs action, such as a risky partner post or a competitor move, walk me through who needs to know, in what form, and how fast. And what do you check daily versus what does your boss ask you for?"
 
   One answer yields four config values: the routing map (who sees what), interrupt-vs-digest policy per topic (risk interrupts; trends digest — but let *their* answer set it), the reporting artifact their boss expects, and how fast "fast" is for them.
 
@@ -69,7 +69,7 @@ From the session: name, email domain, how they've phrased things so far (a CMO a
 `profiles/{brand-slug}/user-profile--{user-slug}.md`:
 
 ```markdown
-# {Name} — User Profile ({Brand})
+# User Profile for {Name} ({Brand})
 *Atlas onboarding · {date} · role: {role} · relationship: {in-house / agency / owner}*
 
 ## Who they are
@@ -82,12 +82,12 @@ From the session: name, email domain, how they've phrased things so far (a CMO a
 | {boss / other teams} | … | … | … |
 
 ## Tools today & the friction
-{Current stack; what's not working, in their words — this is what Atlas is hired to fix}
+{Current stack; what's not working, in their words. This is what Atlas is hired to fix}
 
 ## Cadence policy
 {Interrupts: … · Digest: … · The artifact their boss expects: …}
 
-## Success, as they define it
+## How they define success
 {What has to be true in 90 days for this person to call Atlas worth it}
 
 ## Config extracted

@@ -54,7 +54,7 @@ Rank candidates. You should arrive at the interview with a pre-filled set of 3�
 ## Step 2 — The interview
 
 **Confirm 1 · The set.** Pre-filled:
-> "Based on your content and category, we think your competitors are **{X, Y, Z}**. Right? Anyone missing — and anyone here you don't actually compete with?"
+> "Based on your content and category, we think your competitors are **{X, Y, Z}**. Right? Anyone missing, and anyone here you don't actually compete with?"
 
 For every confirmed competitor, capture the **handle on each platform the index covers**, not just the name. The name fills the exact-match fields; the handle fills content queries. Both, always.
 
@@ -63,7 +63,7 @@ For every confirmed competitor, capture the **handle on each platform the index 
 **Deep probe:**
 
 - **P1 · The last loss.** Competitor lists are cheap; mechanics are signal:
-  > "Walk me through the last time {top competitor} actually cost you something — a creator who went with them, a shelf placement, a customer segment. How did that play out?"
+  > "Walk me through the last time {top competitor} actually cost you something, whether that was a creator who went with them, a shelf placement, or a customer segment. How did that play out?"
 
   Extract: which competitor is a real threat vs a name they track out of habit, *what kind* of loss matters (creators? distribution? attention?), and therefore which competitive questions belong in their brief. A brand that loses creators wants overlap lists; a brand that loses shelf placement wants share-of-voice; those are different briefs.
 
@@ -73,7 +73,7 @@ For each confirmed competitor, run against the index and report only what return
 
 - **Creator overlap** — creators with the competitor in `pastBrandPartnershipPartners` but no history with this brand. Query **every casing variant** captured in Step 1. This ends in a target list — the highest-intent output onboarding can produce.
 - **Dominant themes & aesthetics** in the competitor's creator content right now (normalize aesthetic-tag casing before counting — `Modern` and `modern` are one theme).
-- **Shared hashtag territory** — hashtags both brands' content lives in. Where a share-of-voice comparison would need a hashtag watchlist, recommend the specific `add_profile_hashtag` calls and offer to make them; week-over-week SOV starts counting only once the watchlist exists, so say that.
+- **Shared hashtag territory** — hashtags both brands' content lives in. Where a share-of-voice comparison would need a hashtag watchlist, recommend the specific `add_hashtags` calls and offer to make them; week-over-week SOV starts counting only once the watchlist exists, so say that.
 
 Two query rules that prevent confidently wrong answers: exclude the brand's own posts when searching competitor names in text (their own marketing mentions competitors — filter `author.username`), and a zero result on an exact-match field means *check casing variants* before it means "none."
 
@@ -82,32 +82,33 @@ Two query rules that prevent confidently wrong answers: exclude the brand's own 
 `profiles/{brand-slug}/competitor-profile.md`:
 
 ```markdown
-# {Brand} — Competitor Profile
+# Competitor Profile for {Brand}
 *Atlas onboarding · {date} · set size: {N} · primary: {competitor}*
 
 ## The set
-| Competitor | IG handle | Exact-match strings seen in index | Tier | Why they matter (brand's words) |
+| Competitor | IG handle | Exact spelling seen in your posts | Tier | Why they matter (brand's words) |
 |---|---|---|---|---|
 
 ## What losing looks like
-{From P1 — the kind of loss that hurts, and what that implies the brief should watch}
+{From P1. The kind of loss that hurts, and what that implies the brief should watch}
 
 ## First read
 ### {Competitor 1}
-- Creator overlap: {N creators found — worked with them, never with us} {links}
+- Creator overlap: {N creators found who worked with them and never with us} {links}
 - Dominant themes/aesthetics: …
 - Shared hashtag territory: …
-{repeat per competitor; where a read returned nothing, say "no evidence in index" — not "none exist"}
+{repeat per competitor; where a read returned nothing, say "nothing I can see" rather than "none exist"}
 
 ## Watchlist recommendations
-{Specific hashtags to track for SOV, and whether they were added}
+{Specific hashtags to track for how much of the conversation is theirs, and whether they were added}
 
 ## Limits & gaps
-{Casing variants covered; competitors not yet in the index (ingestion queued);
-SOV needs a watchlist + time — "coming as the watchlist accrues"}
+{Casing variants covered; competitors I cannot read yet (coming);
+the conversation share needs a watchlist and time, so "I'll start counting once
+the watchlist is added"}
 
 ## What this unlocks
-{e.g., weekly overlap-target list; competitor theme watch; SOV once watchlist matures}
+{e.g., weekly overlap-target list; competitor theme watch; conversation share once the watchlist matures}
 ```
 
 ## Step 5 — Close
