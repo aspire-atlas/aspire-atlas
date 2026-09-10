@@ -1,8 +1,8 @@
 {
   "name": "aspire-atlas",
   "displayName": "Atlas by Aspire",
-  "version": "0.9.0",
-  "description": "Atlas by Aspire — the content performance operating system for consumer brands. Phase 1 calibration: question-led onboarding ending in an alignment snapshot and a recommended first action, plus on-demand brand, user, creator, competitor, safety and creative-pattern analysis.",
+  "version": "0.10.0",
+  "description": "Atlas by Aspire — the content performance operating system for consumer brands. Two skills: the /aspire front door (positioning, session mode, state read, routing) and aspire-brand-safety, the Brand Guardian, which screens a creator, an asset or a shortlist against the brand's own recorded standard and returns an approve, review or exclude recommendation with cited evidence.",
   "author": {
     "name": "Payman Salimi"
   },
