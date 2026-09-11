@@ -9,7 +9,7 @@ description: >-
   does Atlas work" — answering from the bundled narrative rather than
   improvising, including for a customer, prospect, investor or candidate who
   asks what Atlas is. Reads onboarding state first — the public account/post
-  fetch from the Aspire Alpha MCP, plus the brand's profile docs — then
+  fetch from the Aspire MCP, plus the brand's profile docs — then
   routes: a brand already calibrated goes to the returning-user path, and a
   brand safety question goes to aspire-brand-safety. The Phase 1
   calibration flow itself is being folded into this skill and is not built yet,
@@ -22,7 +22,7 @@ metadata:
 
 
 <!-- connector-attribution -->
-> **Where these tools come from:** the bare tool names below (`fetch_account`, `fetch_posts`, `search_posts`, `start_business_discovery`, …) are **Aspire Alpha connector** tools, all on its **public** surface; `project_*` are **Claude Project document** tools, not Aspire Alpha ones. This router never calls an admin-surface tool (`link_channel`, `list_channels`, `unlink_channel`), and never should — a brand user does not have them, and this router must behave the same whether or not the session does.
+> **Where these tools come from:** the bare tool names below (`fetch_account`, `fetch_posts`, `search_posts`, `start_business_discovery`, …) are **Aspire connector** tools, all on its **public** surface; `project_*` are **Claude Project document** tools, not Aspire ones. This router never calls an admin-surface tool (`link_channel`, `list_channels`, `unlink_channel`), and never should — a brand user does not have them, and this router must behave the same whether or not the session does.
 > If a session has another connector exposing similarly-named tools (`list_orgs` vs `list_my_organizations`, `list_profiles` vs `list_my_profiles`), they are different servers with different argument shapes — do not substitute one for the other.
 
 # Aspire — Atlas front door
@@ -381,7 +381,7 @@ a retracted fact SHOULD be asked again, which is the opposite case.
 
 Notes that matter:
 
-- Every Aspire Alpha tool requires a `context` string of **15–25 words, third
+- Every Aspire tool requires a `context` string of **15–25 words, third
   person, no credentials**. Write it about the user's goal, not about yourself.
 - If `list_my_organizations` returns more than one org, ask which one before
   going further. Profile auto-resolution only works with exactly one org.

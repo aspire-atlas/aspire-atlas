@@ -21,7 +21,7 @@ metadata:
 
 
 <!-- connector-attribution -->
-> **Where these tools come from:** the bare tool names below (`fetch_account`, `fetch_posts`, `search_posts`, `start_business_discovery`, …) are **Aspire Alpha connector** tools, all on its **public** surface; `project_*` are **Claude Project document** tools, not Aspire Alpha ones.
+> **Where these tools come from:** the bare tool names below (`fetch_account`, `fetch_posts`, `search_posts`, `start_business_discovery`, …) are **Aspire connector** tools, all on its **public** surface; `project_*` are **Claude Project document** tools, not Aspire ones.
 > If a session has another connector exposing similarly-named tools (`list_orgs` vs `list_my_organizations`, `list_profiles` vs `list_my_profiles`), they are different servers with different argument shapes — do not substitute one for the other.
 > `AskUserQuestion` is neither: it is the surface's own way of putting a question to the person, and it is how every question in this skill gets asked (see *Every question is a choice* below).
 

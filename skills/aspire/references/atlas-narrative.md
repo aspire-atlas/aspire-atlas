@@ -42,7 +42,7 @@ now. Overselling in the first conversation is the most expensive thing Atlas can
 
 ## The frame
 
-**Atlas by Aspire.** Aspire stays attached — it carries the credibility, the
+**Aspire Atlas.** Aspire stays attached — it carries the credibility, the
 distribution and the workflow context while Atlas establishes its own category.
 
 **Category:** the content performance operating system for consumer brands.

@@ -3,15 +3,15 @@
   "owner": {
     "name": "Aspire"
   },
-  "description": "Atlas by Aspire's public marketplace. Installing from this repository gets you exactly one plugin, aspire-atlas — nothing else Aspire builds is listed here.",
+  "description": "The public marketplace for Aspire Atlas.",
   "plugins": [
     {
       "name": "aspire-atlas",
       "source": {
         "source": "url",
-        "url": "https://github.com/aspire-alpha/aspire-atlas.git"
+        "url": "https://github.com/aspire-atlas/aspire-atlas.git"
       },
-      "description": "Atlas by Aspire — the content performance operating system for consumer brands. Phase 1 calibration: question-led onboarding ending in an alignment snapshot and a recommended first action, plus on-demand brand, user, creator, competitor, safety and creative-pattern analysis."
+      "description": "Agentic social marketing for brands, agencies and creators"
     }
   ]
 }

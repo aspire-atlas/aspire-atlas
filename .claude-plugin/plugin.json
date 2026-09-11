@@ -1,8 +1,8 @@
 {
   "name": "aspire-atlas",
-  "displayName": "Atlas by Aspire",
-  "version": "0.10.0",
-  "description": "Atlas by Aspire — the content performance operating system for consumer brands. Two skills: the /aspire front door (positioning, session mode, state read, routing) and aspire-brand-safety, the Brand Guardian, which screens a creator, an asset or a shortlist against the brand's own recorded standard and returns an approve, review or exclude recommendation with cited evidence.",
+  "displayName": "Aspire Atlas",
+  "description": "Agentic social marketing for brands, agencies and creators",
+  "version": "0.11.0",
   "author": {
     "name": "Payman Salimi"
   },

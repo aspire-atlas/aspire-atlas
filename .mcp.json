@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "aspire-alpha": {
+    "aspire": {
       "type": "http",
-      "url": "https://alpha.aspire.io/mcp"
+      "url": "https://atlas.aspire.io/mcp"
     }
   }
 }
